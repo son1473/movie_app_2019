@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Movie from "./Movie";
 //import logo from "./logo.svg";
 import "./App.css";
 
@@ -27,8 +28,25 @@ class App extends React.Component {
   }
   // {/* 함수 만들고, delay*/}
   render() {
-    const { isLoading } = this.state;
-    return <div>{isLoading ? "Loading" : "we are ready"}</div>;
+    const { isLoading, movies } = this.state;
+    //state로 부터 isLoading 과 movie 를 가져오겠다는 것이었구나.
+    // this.state.isLoading을 const {isLoading} = this.state로 표현
+    return (
+      <div>
+        {isLoading
+          ? "Loading"
+          : movies.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                summary={movie.summary}
+                poster={movie.medium_cover_image}
+              />
+            ))}
+      </div>
+    );
   }
 }
 

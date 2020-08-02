@@ -59,3 +59,35 @@ React JS fundamentals Course (2019 Update!)
 데이터 가져옴(axios 함).
 그것을 setState로 상태에 있는 영화 배열에 추가하였고,
 데이터를 가져오는 것이 완료되면 로딩이 완료 준비됨이라는 표시로 만듬.
+
+#### this.state.isLoading은 이렇게 다시 표현할 수 있다.
+
+#### const {isLoading} = this.state로 표현
+
+#### this.state.movies도 불러오려면 따로 변수선언치 않고 이렇게 표현할 수 있다.
+
+#### const {isLoading, movies} = this.state;
+
+#### movies.map() this.state.movies array에 map() 함수를 실행
+
+#### map 함수란?
+
+#### map() 메서드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.
+
+#### 초반 강의 때 나온 부분 Movie 함수는 component로 사용함
+
+#### <Movie /> 이것이 component
+
+#### array에
+
+#### ES6 => 함수에 익숙해질 필요가 있겠다.
+
+#### 준비가 완료 되면 실행되는 것
+
+#### state 속 movies 배열에는 영화 데이터가 담긴 오브젝트가 20개 있을 것임.
+
+#### 그 각각 오브젝트에다 함수를 실행하고 반환값을 받는게 map()함수임.
+
+#### map 함수로 각 오브젝트를 movie라 칭하고(그냥 매개변수임) 무언가를 실행할 건데 그게 뭐냐 import 해온 <Movie /> 컴포넌트(함수)임 (Movie.js에 만들어 놓음)
+
+#### 거기 들어가서 인자를 할당할 건데, id = {그 오브젝트.id}
