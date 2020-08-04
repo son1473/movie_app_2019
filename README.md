@@ -44,6 +44,8 @@ React JS fundamentals Course (2019 Update!)
 
 #### npm i axios 하고 import axios
 
+#### ------------------------------------------------------------
+
 ### yts API 사용하기.
 
 #### https://yts.mx/api/v2/list_movies.json
@@ -54,11 +56,15 @@ React JS fundamentals Course (2019 Update!)
 
 #### 함수가 끝나고 나는 걸 확인하려고 async await를 사용함.
 
+#### ------------------------------------------------------------
+
 ### 코딩이 어떻게 일어나는가
 
-데이터 가져옴(axios 함).
-그것을 setState로 상태에 있는 영화 배열에 추가하였고,
-데이터를 가져오는 것이 완료되면 로딩이 완료 준비됨이라는 표시로 만듬.
+#### 데이터 가져옴(axios 함).
+
+#### 그것을 setState로 상태에 있는 영화 배열에 추가하였고,
+
+#### 데이터를 가져오는 것이 완료되면 로딩이 완료 준비됨이라는 표시로 만듬.
 
 #### this.state.isLoading은 이렇게 다시 표현할 수 있다.
 
@@ -70,7 +76,7 @@ React JS fundamentals Course (2019 Update!)
 
 #### movies.map() this.state.movies array에 map() 함수를 실행
 
-#### map 함수란?
+### map 함수란?
 
 #### map() 메서드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.
 
@@ -91,3 +97,19 @@ React JS fundamentals Course (2019 Update!)
 #### map 함수로 각 오브젝트를 movie라 칭하고(그냥 매개변수임) 무언가를 실행할 건데 그게 뭐냐 import 해온 <Movie /> 컴포넌트(함수)임 (Movie.js에 만들어 놓음)
 
 #### 거기 들어가서 인자를 할당할 건데, id = {그 오브젝트.id}
+
+#### --------------------------------------------------------------
+
+### 20200804 Styling the movies
+
+#### JSX에서 클래스 속성을 주려면 className="" 형식으로 써야한다.
+
+#### react js 에서 스타일을 주려면 style component를 사용
+
+#### https://velog.io/@velopert/react-component-styling
+
+#### 1. tyle={{color: "red"}} 더블 브레킷을 사용한다.
+
+#### 2. css 파일을 만들어서 한다. js파일에 import css파일 하면 됨.
+
+#### 장르(genre)를 추가했다. array 형식이고 리스트로 표현하고 싶어서 map함수를 다시 이용했다.
